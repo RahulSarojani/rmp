@@ -1,26 +1,381 @@
-<header class="hero">
-  <div class="container hero__inner">
-    <div class="hero__avatar">
-      <img
-        src="C:\Users\user\Downloads\WhatsApp Image 2025-09-17 at 3.49.07 PM.jpeg"
-        alt="Rahul Patil headshot"
-        width="112"
-        height="112"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-      >
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rahul Patil — Data Science & Development Impact Portfolio</title>
+  <meta name="description" content="Portfolio of Rahul Patil — Development professional transitioning into Data Science. Python, SQL, Power BI, Machine Learning." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Sticky top nav -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#home">RP</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#impact">Impact</a>
+        <a href="#experience">Experience</a>
+        <a href="#transition">Data Science</a>
+        <a href="#education">Education</a>
+        <a href="#courses">Certifications</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="modeToggle" class="mode-toggle" aria-label="Toggle theme">🌓</button>
     </div>
+  </header>
 
-    <div class="hero__text">
-      <h1>Rahul Patil</h1>
-      <p class="subtitle">Development Professional · Data Science Enthusiast · Sustainability Advocate</p>
-      <p class="note">Actively seeking opportunities in the <strong>Data Science</strong> domain</p>
-      <div class="actions">
-        <a class="btn primary" href="assets/resume/Rahul_Patil_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-        <a class="btn" href="mailto:rahulsarojani@gmail.com">Email Me</a>
-        <a class="btn" href="https://linkedin.com/in/rahul-patil-tiss" target="_blank" rel="noopener">LinkedIn</a>
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="wrap hero__inner">
+      <div class="hero__avatar">
+        <img src="assets/images/profile.jpg" alt="Rahul Patil headshot" width="128" height="128" />
+      </div>
+      <div class="hero__text">
+        <h1>Hi, I’m <span class="accent">Rahul Patil</span></h1>
+        <p class="subtitle">Development Professional → <strong>Data Science</strong> | Sustainability Advocate</p>
+        <p class="lede">
+          I bridge <strong>8 years</strong> of on-ground development experience with <strong>4 years</strong> of
+          data-science upskilling to turn real-world problems into <strong>actionable insights</strong>.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="assets/resume/Rahul_Patil_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          <a class="btn" href="mailto:rahulsarojani@gmail.com">Email</a>
+          <a class="btn" href="https://linkedin.com/in/rahul-patil-tiss" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
       </div>
     </div>
-  </div>
-</header>
+    <div class="wrap hero__badges">
+      <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span>
+      <span class="chip">Machine Learning</span><span class="chip">Pandas</span><span class="chip">scikit-learn</span>
+      <span class="chip">LangChain</span><span class="chip">Data Viz</span>
+    </div>
+  </section>
+
+  <!-- Impact counters -->
+  <section id="impact" class="section">
+    <div class="wrap">
+      <h2>Impact Snapshot</h2>
+      <div class="kpis">
+        <div class="kpi">
+          <div class="kpi__num" data-target="150000">0</div>
+          <div class="kpi__label">Stakeholders Trained (UNICEF)</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num" data-target="600">0</div>
+          <div class="kpi__label">Women Leaders Trained</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num" data-target="900">0</div>
+          <div class="kpi__label">Rural Youth Reached</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num" data-target="5000">0</div>
+          <div class="kpi__label">School Children Trained</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi__num" data-target="15">0</div>
+          <div class="kpi__label">Community Libraries Set Up</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I am a development professional with deep experience across <strong>sustainability</strong>,
+          <strong>climate change</strong>, <strong>WASH</strong>, <strong>education</strong>, and community resilience.
+          I’m transitioning into Data Science to scale impact with <strong>evidence-based decision-making</strong>.
+        </p>
+        <ul class="ticks">
+          <li>Working with <strong>real-time datasets</strong> and monitoring & evaluation (M&E)</li>
+          <li>Strong in <strong>Python</strong>, <strong>SQL</strong>, <strong>Power BI</strong>, and <strong>ML</strong></li>
+          <li>Comfortable collaborating across government, non-profits, and CSR programs</li>
+        </ul>
+      </div>
+      <aside class="card highlight">
+        <h3>Currently Volunteering</h3>
+        <p><strong>NSDC’s Medical Chatbot</strong> (with Columbia University)</p>
+        <p class="muted">Building a RAG + LLM-powered chatbot to provide reliable healthcare information.</p>
+        <p class="tags"><span>Python</span><span>LangChain</span><span>LLMs</span><span>RAG</span></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Experience with filters -->
+  <section id="experience" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Professional Experience</h2>
+        <div class="filters">
+          <button class="pill active" data-filter="all">All</button>
+          <button class="pill" data-filter="impact">Impact</button>
+          <button class="pill" data-filter="education">Education</button>
+          <button class="pill" data-filter="wash">WASH</button>
+        </div>
+      </div>
+
+      <article class="card role" data-tags="impact education wash">
+        <div class="role__org">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw0XlRQscipdxj5hS7-UZ4PLByBolVHMJ-bw&s" alt="Intellect Design CSR" />
+          <div>
+            <h3>Development Catalyst — Intellect Design (CSR)</h3>
+            <p class="muted">Oct 2022 – Jun 2025 · Wardha, India</p>
+          </div>
+        </div>
+        <ul>
+          <li>Led <strong>impact assessment & M&E</strong> for Wardha Cluster Development Program.</li>
+          <li>Promoted water conservation via <strong>Paani Foundation Farmers Cup</strong>.</li>
+          <li>Launched STEAM education & career programs for <strong>900+ rural youth</strong>.</li>
+          <li>Trained <strong>600+ women leaders</strong> on WASH, Climate Change & Gender.</li>
+        </ul>
+      </article>
+
+      <article class="card role" data-tags="wash impact">
+        <div class="role__org">
+          <img src="https://www.unicef.org/sites/default/files/styles/crop_thumbnail/public/UNICEF_logo_2016.png.webp?itok=woicjEiz" alt="UNICEF" />
+          <div>
+            <h3>Young Professional — UNICEF India</h3>
+            <p class="muted">Aug 2020 – Feb 2022 · Hyderabad, India</p>
+          </div>
+        </div>
+        <ul>
+          <li>Designed WASH & climate resilience policies across <strong>3 states</strong>.</li>
+          <li>Trained <strong>150,000+</strong> stakeholders on COVID-19, WASH, and stress management.</li>
+          <li>Organized India’s first <strong>National WASH Conclave (2022)</strong>.</li>
+          <li>Advanced youth-led climate advocacy & innovation.</li>
+        </ul>
+      </article>
+
+      <article class="card role" data-tags="wash impact education">
+        <div class="role__org">
+          <img src="https://landportal.org/sites/default/files/2024-03/TATA%20Trusts%20.jpg" alt="Tata Trusts" />
+          <div>
+            <h3>Program Associate — Tata Trusts</h3>
+            <p class="muted">Jun 2019 – Apr 2020 · Gadchiroli, India</p>
+          </div>
+        </div>
+        <ul>
+          <li>Managed <strong>WASH & nutrition</strong> programs across rural districts.</li>
+          <li>Trained <strong>5,000+</strong> school children during early COVID.</li>
+          <li>Partnered with district administration on strategy & policy.</li>
+        </ul>
+      </article>
+
+      <article class="card role" data-tags="education impact">
+        <div class="role__org">
+          <img src="https://nalanda-academy.org/wp-content/themes/custom-theme/images/logo.png" alt="Nalanda Academy" />
+          <div>
+            <h3>Program Coordinator — Nalanda Academy</h3>
+            <p class="muted">Oct 2016 – Jun 2018 · Wardha, India</p>
+          </div>
+        </div>
+        <ul>
+          <li>Set up <strong>15 community libraries</strong> across Maharashtra, Gujarat & Chhattisgarh.</li>
+          <li>Mentored <strong>100+ students</strong> in analytical reasoning & mathematics.</li>
+          <li>Guided marginalized students to higher-education pathways.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- DS Transition -->
+  <section id="transition" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>Data Science Transition</h2>
+        <p>
+          I’ve invested the last four years mastering core DS skills and applying them to real-world contexts.
+          I bring <strong>domain depth</strong> from development + <strong>technical rigor</strong> in data.
+        </p>
+        <div class="progress">
+          <div class="prog">
+            <div class="prog__label">Python</div><div class="prog__bar"><span style="width:88%"></span></div>
+          </div>
+          <div class="prog">
+            <div class="prog__label">SQL</div><div class="prog__bar"><span style="width:82%"></span></div>
+          </div>
+          <div class="prog">
+            <div class="prog__label">Power BI</div><div class="prog__bar"><span style="width:85%"></span></div>
+          </div>
+          <div class="prog">
+            <div class="prog__label">Machine Learning</div><div class="prog__bar"><span style="width:75%"></span></div>
+          </div>
+        </div>
+
+        <h3 class="mt">Tooling & Libraries</h3>
+        <p class="tags"><span>Pandas</span><span>NumPy</span><span>scikit-learn</span><span>Matplotlib</span><span>LangChain</span><span>LLMs</span></p>
+      </div>
+
+      <aside class="card">
+        <h3>Current Volunteering — Medical Chatbot</h3>
+        <p><strong>RAG + LLMs</strong> for reliable medical information (NSDC with Columbia University).</p>
+        <ul class="ticks">
+          <li>Pipeline: retrieval → chunking → embeddings → context injection</li>
+          <li>Focus: safety, citations, prompt hygiene, evaluation</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <div class="wrap">
+      <h2>Education</h2>
+      <div class="grid">
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Ashoka_University_logo_with_wordmark.png" alt="Ashoka University" /></div>
+          <div class="edu__body">
+            <h3>Professional Executive Development Program, Data Science for Social Impact</h3>
+            <p class="muted">School of Data Science, Ashoka University · 2024–2025</p>
+          </div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/IGNOU_logo.svg/1200px-IGNOU_logo.svg.png" alt="IGNOU" /></div>
+          <div class="edu__body">
+            <h3>MA, Development Studies</h3>
+            <p class="muted">Indira Gandhi National Open University · 2019–2021</p>
+          </div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c1/IGNOU_logo.svg/1200px-IGNOU_logo.svg.png" alt="IGNOU" /></div>
+          <div class="edu__body">
+            <h3>Post Graduate Certificate, Climate Change</h3>
+            <p class="muted">IGNOU · 2022</p>
+          </div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/en/b/bf/Tata_Institute_of_Social_Sciences_Logo.svg" alt="TISS" /></div>
+          <div class="edu__body">
+            <h3>PG Diploma, Water, Sanitation & Hygiene (WASH)</h3>
+            <p class="muted">Tata Institute of Social Sciences · 2018–2019</p>
+          </div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Rashtrasant_Tukadoji_Maharaj_Nagpur_University_logo.jpg" alt="RTMNU" /></div>
+          <div class="edu__body">
+            <h3>B.E., Mechanical Engineering</h3>
+            <p class="muted">RTM Nagpur University · 2011–2014</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section id="courses" class="section">
+    <div class="wrap">
+      <h2>Courses & Certifications</h2>
+      <div class="grid">
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Data_Analytics_Certificate_logo.png" alt="Google Data Analytics" /></div>
+          <div class="edu__body"><h3>Google Data Analytics (Coursera)</h3><p class="muted">2023</p></div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://nareshit.com/wp-content/uploads/2022/08/cropped-naresh-logo.png" alt="Naresh IT" /></div>
+          <div class="edu__body"><h3>Full Stack Data Science & AI (Naresh IT)</h3><p class="muted">2022</p></div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://www.ox.ac.uk/sites/files/oxford/styles/ow_medium_feature/s3/field/field_image_main/Oxford.jpg" alt="Oxford" /></div>
+          <div class="edu__body"><h3>School of Climate Change (University of Oxford)</h3><p class="muted">2022</p></div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/UNICEF_logo.png" alt="UNICEF" /></div>
+          <div class="edu__body"><h3>UNICEF WASH Financing · Early Childhood Programming</h3><p class="muted">2021</p></div>
+        </article>
+        <article class="card edu">
+          <div class="edu__logo"><img src="https://www.corporatefinanceinstitute.com/wp-content/uploads/2021/05/CFI-logo.png" alt="CFI" /></div>
+          <div class="edu__body"><h3>Introduction to ESG (CFI)</h3><p class="muted">2022</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>Leadership & Community</h2>
+        <p><strong>President & Founding Member — <a href="https://www.equatorialvoices.earth" target="_blank" rel="noopener">Equatorial Voices Network</a></strong></p>
+        <p class="muted">Building a platform for climate resilience with real-time data and knowledge sharing, creating changemakers through higher education.</p>
+      </div>
+      <aside class="card">
+        <h3>Open to Opportunities</h3>
+        <p>Seeking roles in <strong>Data Science / Analytics</strong> where community impact and data rigor meet.</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="wrap two">
+      <div>
+        <h2>Contact</h2>
+        <ul class="contact">
+          <li><strong>Email:</strong> <a href="mailto:rahulsarojani@gmail.com">rahulsarojani@gmail.com</a></li>
+          <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/rahul-patil-tiss" target="_blank" rel="noopener">linkedin.com/in/rahul-patil-tiss</a></li>
+          <li><strong>Location:</strong> India</li>
+        </ul>
+      </div>
+      <form class="card form" action="https://formspree.io/f/your-id" method="POST">
+        <h3>Message Me</h3>
+        <label>Name <input name="name" required></label>
+        <label>Email <input name="email" type="email" required></label>
+        <label>Message <textarea name="message" rows="4" required></textarea></label>
+        <button class="btn primary" type="submit">Send</button>
+        <p class="muted tiny">Powered by Formspree — replace <code>your-id</code> with your endpoint (optional)</p>
+      </form>
+    </div>
+    <p class="foot">© 2025 Rahul Patil</p>
+  </section>
+
+  <!-- Minimal JS: theme, filters, counters -->
+  <script>
+    // Theme toggle
+    const toggle = document.getElementById('modeToggle');
+    toggle?.addEventListener('click', () => {
+      document.documentElement.toggleAttribute('data-dark');
+      localStorage.setItem('theme-dark', document.documentElement.hasAttribute('data-dark'));
+    });
+    // Persist theme
+    if (localStorage.getItem('theme-dark') === 'true') {
+      document.documentElement.setAttribute('data-dark', '');
+    }
+
+    // Filters
+    const pills = document.querySelectorAll('.pill');
+    const roles = document.querySelectorAll('.role');
+    pills.forEach(p => p.addEventListener('click', () => {
+      pills.forEach(x => x.classList.remove('active'));
+      p.classList.add('active');
+      const key = p.dataset.filter;
+      roles.forEach(r => {
+        if (key === 'all') r.style.display = '';
+        else r.style.display = r.dataset.tags.includes(key) ? '' : 'none';
+      });
+    }));
+
+    // KPI counters
+    const nums = document.querySelectorAll('.kpi__num');
+    const observe = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (!en.isIntersecting) return;
+        const el = en.target, target = +el.dataset.target;
+        let cur = 0, step = Math.ceil(target / 80);
+        const t = setInterval(() => {
+          cur += step;
+          if (cur >= target) { cur = target; clearInterval(t); }
+          el.textContent = cur.toLocaleString();
+        }, 16);
+        observe.unobserve(el);
+      });
+    }, {threshold: 0.4});
+    nums.forEach(n => observe.observe(n));
+  </script>
+</body>
+</html>
