@@ -1,68 +1,104 @@
-/* ---- Rahul Patil — Admissions Portfolio ---- */
+/* ==== Rahul Patil — Interactive Portfolio ==== */
 :root{
-  --bg:#ffffff;
-  --ink:#0f172a;
-  --muted:#64748b;
-  --line:#e2e8f0;
-  --brand:#0ea5e9;
-  --brand-ink:#075985;
-  --card:#f8fafc;
+  --bg:#ffffff; --ink:#0f172a; --muted:#64748b; --line:#e2e8f0;
+  --brand:#2563eb; --brand-ink:#1e40af; --card:#f8fafc; --chip:#eef2ff;
+}
+:root[data-dark]{
+  --bg:#0b1220; --ink:#e5e7eb; --muted:#a1a1aa; --line:#1f2937;
+  --brand:#60a5fa; --brand-ink:#bfdbfe; --card:#0f172a; --chip:#111827;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Inter,InterVarFallback,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
 img{max-width:100%;height:auto;display:block}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
 
-.container{max-width:1000px;margin:0 auto;padding:0 20px}
+/* Topbar */
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.7);
+  backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+:root[data-dark] .topbar{background:rgba(11,18,32,.7)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+.brand{font-weight:800;color:var(--brand);text-decoration:none;border:2px solid var(--brand);padding:2px 8px;border-radius:10px}
+.nav a{color:var(--ink);opacity:.8;text-decoration:none;margin:0 10px}
+.nav a:hover{opacity:1;color:var(--brand)}
+.mode-toggle{border:1px solid var(--line);background:transparent;color:var(--ink);padding:8px 10px;border-radius:10px;cursor:pointer}
 
-.hero{background:linear-gradient(180deg,#0b1220 0%,#0f172a 100%);color:#fff;padding:48px 0 24px;border-bottom:1px solid #0b1220;position:sticky;top:0;z-index:5}
-/* modified to align avatar + text nicely */
-.hero__inner{display:flex;justify-content:space-between;align-items:center;gap:20px}
-
-/* NEW: avatar styles */
+/* Hero */
+.hero{padding:46px 0 10px;border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(37,99,235,.05),transparent)}
+.hero__inner{display:flex;gap:20px;align-items:center}
 .hero__avatar img{
-  width:112px;             /* adjust to taste: 96–144px works well */
-  height:112px;
-  border-radius:50%;       /* circle */
-  object-fit:cover;        /* neat crop */
-  border:3px solid rgba(255,255,255,.6);
-  box-shadow:0 6px 18px rgba(0,0,0,.2);
+  width:128px;height:128px;border-radius:50%;object-fit:cover;
+  border:3px solid rgba(0,0,0,.07);box-shadow:0 8px 24px rgba(2,6,23,.15)
 }
-
-.hero__text h1{margin:0 0 6px 0;font-size:32px}
-.subtitle{margin:0;color:#cbd5e1}
-.note{margin:10px 0 0 0;color:#93c5fd}
+:root[data-dark] .hero__avatar img{border-color:rgba(255,255,255,.2)}
+.hero__text h1{margin:0 0 6px 0;font-size:34px}
+.accent{color:var(--brand)}
+.subtitle{margin:0;color:var(--muted)}
+.lede{margin:.6rem 0 0 0;max-width:60ch}
 .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.btn{display:inline-block;border:1px solid rgba(255,255,255,.25);padding:10px 14px;border-radius:10px;color:#e2e8f0;text-decoration:none;font-weight:600;backdrop-filter: blur(4px)}
-.btn:hover{border-color:#fff;color:#fff}
-.btn.primary{background:#38bdf8;color:#0b1220;border-color:#38bdf8}
-.btn.primary:hover{background:#7dd3fc;border-color:#7dd3fc}
+.btn{display:inline-block;border:1px solid var(--line);padding:10px 14px;border-radius:12px;
+  color:var(--ink);text-decoration:none;font-weight:600}
+.btn:hover{border-color:var(--brand);color:var(--brand)}
+.btn.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+.btn.primary:hover{background:var(--brand-ink);border-color:var(--brand-ink)}
+.hero__badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{background:var(--chip);border:1px solid var(--line);padding:6px 10px;border-radius:999px;font-size:14px}
+:root[data-dark] .chip{border-color:#1f2937}
 
-.section{padding:34px 0;border-top:1px solid var(--line)}
-.section h2{margin:0 0 14px 0;font-size:22px}
-.muted{color:var(--muted)}
-
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
-
+/* Sections */
+.section{padding:36px 0;border-top:1px solid var(--line)}
+.section h2{margin:0 0 14px 0;font-size:24px}
+.two{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width: 860px){ .two,.grid{grid-template-columns:1fr} .hero__inner{flex-direction:column;align-items:flex-start}}
 
-@media (max-width: 760px){
-  /* keep things tidy on mobile */
-  .hero__inner{flex-direction:row;align-items:center;gap:14px}
-  .grid{grid-template-columns:1fr}
-}
+/* Cards & callouts */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.highlight{border-left:4px solid var(--brand)}
 
-.org{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:center}
-.org__logo img{width:72px}
-.edu{display:grid;grid-template-columns:72px 1fr;gap:14px;align-items:center}
-.edu__logo img{width:60px}
+/* KPI counters */
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media (max-width: 860px){ .kpis{grid-template-columns:repeat(2,1fr)} }
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center}
+.kpi__num{font-size:26px;font-weight:800}
+.kpi__label{font-size:13px;color:var(--muted)}
 
-ul{margin:10px 0 0 18px}
-ul li{margin:6px 0}
+/* Lists and tags */
+.ticks{list-style:none;padding:0;margin:10px 0 0 0}
+.ticks li{position:relative;padding-left:26px;margin:8px 0}
+.ticks li::before{content:"✓";position:absolute;left:0;top:0;color:var(--brand);font-weight:800}
+.tags span{display:inline-block;margin:4px 6px 0 0;padding:4px 8px;border:1px solid var(--line);border-radius:999px;font-size:13px}
 
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.chips span{background:#e6f4ff;border:1px solid #cde7ff;color:#0b5394;padding:6px 10px;border-radius:999px;font-size:14px}
+/* Roles */
+.section-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.filters{display:flex;flex-wrap:wrap;gap:8px}
+.pill{border:1px solid var(--line);background:transparent;padding:6px 10px;border-radius:999px;cursor:pointer}
+.pill.active,.pill:hover{border-color:var(--brand);color:var(--brand)}
+.role{margin:12px 0}
+.role__org{display:flex;gap:12px;align-items:center;margin-bottom:4px}
+.role__org img{width:52px;height:52px;object-fit:contain}
 
-.contact{list-style:none;padding-left:0}
+/* Progress bars */
+.progress{display:grid;gap:10px;margin-top:6px}
+.prog{display:grid;grid-template-columns:140px 1fr;align-items:center;gap:10px}
+.prog__label{font-weight:600}
+.prog__bar{background:var(--line);height:9px;border-radius:999px;overflow:hidden}
+.prog__bar span{display:block;height:100%;background:linear-gradient(90deg,var(--brand),var(--brand-ink))}
+
+/* Education/Courses tiles */
+.edu{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center}
+.edu__logo img{width:56px}
+
+/* Contact + form */
+.contact{list-style:none;padding:0;margin:0}
 .contact li{margin:6px 0}
-.foot{color:var(--muted);margin-top:12px;font-size:14px}
+.form label{display:block;margin:8px 0 4px 0;font-weight:600}
+.form input,.form textarea{
+  width:100%;padding:10px;border-radius:10px;border:1px solid var(--line);
+  background:transparent;color:var(--ink);font:inherit
+}
+.form button{margin-top:8px}
 
+/* Footer */
+.foot{color:var(--muted);text-align:center;margin-top:18px;font-size:14px}
